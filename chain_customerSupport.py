@@ -4,7 +4,7 @@ from langchain_openai import ChatOpenAI
 from langchain.prompts import PromptTemplate
 import os
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 llm = ChatOpenAI(temperature=0.9)
 def handle_complaint(komplain: str) -> str:
     
