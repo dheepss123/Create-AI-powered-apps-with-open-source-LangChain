@@ -1,0 +1,9 @@
+langchain
+langchain_openai
+gradio
+chromadb
+tiktoken
+huggingface_hub
+wget
+pysqlite3-binary
+numexpr
