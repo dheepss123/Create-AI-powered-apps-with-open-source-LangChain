@@ -1,8 +1,13 @@
 import os
-from langchain_openai import chatOpenAI
+from langchain_openai import ChatOpenAI
+import gradio as gr
 
-os.environ["OPEN_API_KEY"] = "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"
-gpt3 = chatOpenAI(model_name="gpt-3.5-turbo")
 
-text = "halo aku dheo apa kabar"
-print(gpt3.invoke(text).content)
+os.environ["OPENAI_API_KEY"] = "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"
+
+gpt3 = ChatOpenAI(model_name="gpt-3.5-turbo")
+
+def chatbot(prompt):
+    return gpt3.invoke(prompt).content
+demo = gr.Interface(fn = chatbot, inputs= "text", outputs= "text")
+demo.launch(server_name="0.0.0.0", server_port=7860, share= True)
