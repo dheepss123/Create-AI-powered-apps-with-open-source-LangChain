@@ -3,7 +3,7 @@ from langchain.prompts import PromptTemplate
 import os
 from langchain_openai import ChatOpenAI
 
-openai_key = "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"
+openai_key = ""
 os.environ["OPENAI_API_KEY"] = openai_key
 
 llm = ChatOpenAI(
